@@ -1,0 +1,34 @@
+<html>
+   <body>
+      <h3>Change Background Color of Textbox</h3>
+      Enter your name:
+      <input type="text" id="myInput" onblur="blurFunction(this)" onfocus="focusFunction(this)">
+      <script>
+          function blurFunction(obj) {
+            obj.style.background = obj.value.length==0 ? "red" : "green"  
+          }
+          function focusFunction(obj) {
+            obj.style.background = obj.value.length==0 ? "red" : "yelow"  
+          }
+          // Event	         Description
+          // onchange	      = An HTML element has been changed
+          // onclick	      = The user clicks an HTML element
+          // onmouseover    = The user moves the mouse over an HTML element
+          // onmouseout	    = The user moves the mouse away from an HTML element
+          // onkeydown	    = The user pushes a keyboard key
+          // onload	        = The browser has finished loading the page
+          // Mouse Events
+          // Event	          Occurs When
+          // onclick	      = A user clicks on an element
+          // oncontextmenu	= A user right-clicks on an element
+          // ondblclick	    = A user double-clicks on an element
+          // onmousedown	  = A mouse button is pressed over an element
+          // onmouseenter	  = The mouse pointer moves into an element
+          // onmouseleave	  = The mouse pointer moves out of an element
+          // onmousemove	  = The mouse pointer moves over an element
+          // onmouseout	    = The mouse pointer moves out of an element
+          // onmouseover	  = The mouse pointer moves onto an element
+          // onmouseup	    = A mouse button is released over an element
+      </script>
+  </body>
+</html>

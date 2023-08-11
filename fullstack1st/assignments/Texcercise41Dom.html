@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background: tomato;
+            }
+            ul {
+                list-style-type: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Create List of Images</h1>
+        <p>Write in textbox name of image and load it.
+            you can select from the list below :</p>
+            <p>Create function named add. When the user inputs the name of a
+                picture from the list and presses add picture, the picture will
+                added to ul element with class id=list.</p>
+        <ol class="txtList">
+            <li>poop.png</li>
+            <li>sea.png</li>
+            <li>smile.png</li>
+            <li>star.png</li>
+            <li>sad.png</li>
+        </ol>
+        <input type="text" id="name" placeholder="Add picture">
+        <button class="add" onclick="add()">Add picture</button>
+        <ul class="pictureList">
+            <li> scr = "" </li>
+            <li>  </li>
+            <li> </li>
+            <li> </li>
+        </ul> 
+        <img id="img" src="" >
+        <script>
+        let i = 0;
+        function add(){
+                    // const listItems = document.getElementById("name").getElementsByTagName("li"); // create list
+                    // console.log(listItems.length); // check list size
+                    let select = document.getElementById("name").value;
+                    if (select.length==0) {
+                        alert("empty name")
+                        return
+                    }
+                    // let arr = document.querySelectorAll(".pictureList li");
+                    var _ul=document.getElementsByClassName(".pictureList");
+                    // var _list=document.createElement('li');
+                    
+    
+                        console.log(1);
+                        console.log(select);
+                        console.log(2);
+                        // let newLi = document.createElement("li");
+                        if (select === "poop.png")  {
+                            var _list=_ul.getElementsByTagName('li');
+                            var _img=document.createElement('img'); 
+                            _img.src="poop.png";
+                            _img.id="foo"+i;
+                            _list[i].appendChild(_img);
+                            i++
+                            document.querySelectorAll(".main-nav ul");
+                        }
+                        if (select === "sea.png")  { 
+                            var _list=_ul.getElementsByTagName('li');
+                            var _img=document.createElement('img'); 
+                            _img.src="sea.png";
+                            _img.id="foo"+i;
+                            _list[i].appendChild(_img);
+                            i++
+                            document.querySelectorAll(".main-nav ul");
+                        } else alert("value :" + selection+" not in list ");
+                
+                        console.log(7);
+                        // if (picture == "sad.png" )  img.src="img/sad.png";
+                        // if (picture == "sea.png" )  img.src="img/sea.png";
+                        // if (picture == "smile.png" )  img.src="img/smile.png";
+                        // if (picture == "star.png" )  img.src="img/star.png";
+                        document.getElementById("name").value = "";
+                        console.log(8);
+                    }
+        </script>
+    </body>
+</html>
+

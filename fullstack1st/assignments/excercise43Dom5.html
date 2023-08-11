@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <header>
+            <title> Do it Yourself 5 </title>
+        </header>
+        <style>
+            body{ background: tomato; }
+            ul { list-style-type: none; }                        
+        </style>
+    </head>
+    <body>
+        <h1>Create List of Images</h1>
+        <p> Write in textbox name of image and load it.
+            you can select from the list below :</p>
+            <p> Add on to the previous function
+                code that dynamically creates the
+                image with a width and height of
+                100px</p>
+            <p> Do it Yourself 5 </p>
+        <ol class="txtList">
+            <li>poop.png</li>
+            <li>sea.png</li>
+            <li>smile.png</li>
+            <li>star.png</li>
+            <li>sad.png</li>
+        </ol>
+        <input type="text" id="name" placeholder="Add picture">
+        <button class="add" onclick="add()">Add picture</button>
+        <ul id="pictureList"> 
+        </ul> 
+        <script>     
+            function add(){
+                    // read user selection of picture 
+                    let select = document.getElementById("name").value;
+                    // if no selection performd by user alert
+                    if (select.length==0) {
+                        alert("empty name")
+                        return;
+                    }
+                    // log verifiction on debug mode of user selection : console.log(select);
+                    // create array list of pictures: 
+                    let arr = ['poop.png','sea.png','smile.png','star.png','sad.png'];
+                    // if user made selection of picture to add verify if and insert it to ul li list
+                    if (arr.includes(select))  {
+                        // *a. Create element img and give it img.src dynamically
+                        let img = document.createElement('img');
+                        // dinamicali add weight and height = 100px
+                        img.style.weight = "100px";
+                        img.style.height = "100px";
+                        // build the right picture location for the created img object
+                        let uppandSelectionLocation = 'img/'+select;
+                        console.log(uppandSelectionLocation);
+                        img.src = uppandSelectionLocation;
+                        // *b. Create li element dynamically
+                        let li = document.createElement('li');
+                        // *c. Get reference to li with id = picturelist
+                        let ul = document.getElementById('pictureList');
+                        //*d. Append the picture to li
+                        li.appendChild(img);
+                        //*e. Append li to the ul
+                        ul.appendChild(li);
+                        }
+                    else {
+                        alert("picture not found "+"🥹");
+                    }                          
+                }
+        </script>
+    </body>
+</html>

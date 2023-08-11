@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+    <html>
+        <body>
+
+            <h1>JavaScript Arrays</h1>
+            <h2>CAdd a button with the caption Add 5 numbers to array</h2>
+            <button onclick="getInput(5)">find max</button>
+            <br />
+            <p>  Add a button with the caption Add 5 numbers to array
+                a. Add a paragraphs with id = "max”
+                b. Declare empty array (let/var arr=[])
+                c. Write a script that receives 5 numbers from the prompt and push
+                them to arr.
+                d. The script will display on id = "max” the max number in the array
+                e. Call the functions by pressing a button. </p>
+            
+            <p id="max"></p>
+            
+            <script>
+
+                // b. Declare empty array (let/var arr=[])
+                // let points = new Array[];
+                let arr = [];
+                //  c. Write a script that receives 5 numbers from the prompt and push them to arr.
+                function getInput(n) {
+                    for (let i = 0; i < n; i++) {
+                        let num = parseInt(prompt("print number"));
+                        arr.push(num);
+                    }
+                    // show the array content on console
+                    console.log(arr);
+                    // initiate max
+                    let max = arr[0];
+                    // find the max number
+                    for (let i=1; i< arr.length-1;i++){
+                        if (arr[i] > max) max = arr[i];
+                    }
+                    // print the array max number on screen
+                    document.getElementById("max").innerHTML = "the max number is equals to: " + max;
+            }
+            </script>
+
+        </body>
+</html>

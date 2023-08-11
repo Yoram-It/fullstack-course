@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <html>
+        <body>
+
+            <h1>JavaScrip Functions / Do it Yourself 4 </h1>
+            <h2>A. Write an expression function that accepts an array, and return the sum of the
+                numbers of the array. </h2>
+            <h2>B. Call the function from A using arr=[20,60,12,9] and alert the sum of array </h2>
+            
+            <button onclick="insertNumbers()">find min</button>
+            <br />
+            <p id="fun"></p>
+            
+            <script>
+                function insertNumbers () {
+                let arraySum = function (arr)  {
+                        let sum = 0;
+                        for (let i = 0;  i< arr.length;i++) {
+                            sum+=arr[i];
+                        }
+                        return (sum);
+                }
+                let arr1= [20,60,12,9];
+                alert(arraySum(arr1));
+            }  
+            </script>
+        </body>
+</html>

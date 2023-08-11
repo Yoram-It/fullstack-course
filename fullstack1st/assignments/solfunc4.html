@@ -1,0 +1,50 @@
+<html>
+    <body>
+        <button onclick="getInput(3)">find max</button>
+        <br />
+        <p id="max"></p>
+        <script>
+            //delaration
+            //int[]a = new int[6];
+            function getInput(n) {
+                let arr = [];
+
+                for (let i = 0; i < n; i++) {
+                    let n1 = parseInt(prompt("print number"));
+                    arr.push(n1);
+                }
+                let max = maxInArray(arr);
+                //alert(max);
+                document.getElementById("max").innerText = max;
+            }
+            //function
+            function maxInArray(arr) {
+                let max = arr[0];
+                for (let i = 0; i < arr.length; i++) {
+                    if (arr[i] > max) {
+                        max = arr[i];
+                    }
+                }
+                return max;
+            }
+            const maxInArray2 = function (arr) {
+                let max = arr[0];
+                for (let i = 0; i < arr.length; i++) {
+                    if (arr[i] > max) {
+                        max = arr[i];
+                    }
+                }
+                return max;
+            };
+            const maxInArray3 = (arr) => {
+                let max = arr[0];
+                for (let i = 0; i < arr.length; i++) {
+                    if (arr[i] > max) {
+                        max = arr[i];
+                    }
+                }
+                return max;
+            };
+        </script>
+    </body>
+</html>

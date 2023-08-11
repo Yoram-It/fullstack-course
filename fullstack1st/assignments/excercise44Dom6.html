@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <header>
+            <title> Do it Yourself 6 </title>
+        </header>
+        <style>
+            body{ background: tomato; }
+            ul { list-style-type: none; }                        
+        </style>
+    </head>
+    <body>
+        <h1>Create List of Images</h1>
+        <p> Write in textbox name of image and load it.
+            you can select from the list below :</p>
+            <p> Create a new function named remove that accepts
+                a string parameter called name that removes
+                from list picture names that were previously
+                added. 
+                use:
+                function remove(name){}
+                Call the function from the function add.</p>
+            <p> Do it Yourself 5 </p>
+        <ol id ="list" class="txtList" >
+            <li>poop.png</li>
+            <li>sea.png</li>
+            <li>smile.png</li>
+            <li>star.png</li>
+            <li>sad.png</li>
+        </ol>
+        <input type="text" id="name" placeholder="Add picture">
+        <button class="add" onclick="add()">Add picture</button>
+        <ul id="pictureList"> 
+        </ul> 
+        <script>   
+            // create array list of pictures: 
+            let arr = ['poop.png','sea.png','smile.png','star.png','sad.png'];
+            // remove item from list 
+            function remove(name) {
+                // create list of il items
+                var listItems = document.getElementById("list").getElementsByTagName("li");
+                // check the item asked to be removed 
+                for(var i=0; li=listItems[i]; i++) {
+                    if (listItems.length <= 0) {
+                        alert("empty name list name not in list");
+                        return;
+                    }
+                    // remove relevant item:
+                    if (name === li.textContent)  {
+                        li.parentNode.removeChild(li); // remove relevant li from List
+                        arr.splice(i, 1); // rember to delete element also from the array....
+                        console.log(arr); // verify array's deletion took place 
+                    }
+                }
+            }     
+            function add(){
+                    // read user selection of picture 
+                    let select = document.getElementById("name").value;
+                    // if no selection performd by user alert
+                    if (select.length==0) {
+                        alert("empty name")
+                        return;
+                    }
+                    // if user made selection of picture to add verify if and insert it to ul li list
+                    if (arr.includes(select))  {
+                        // *a. Create element img and give it img.src dynamically
+                        let img = document.createElement('img');
+                        // dinamicali add weight and height = 100px
+                        img.style.weight = "100px";
+                        img.style.height = "100px";
+                        // build the right picture location for the created img object
+                        let uppandSelectionLocation = 'img/'+select;
+                        console.log(uppandSelectionLocation);
+                        img.src = uppandSelectionLocation;
+                        // *b. Create li element dynamically
+                        let li = document.createElement('li');
+                        // *c. Get reference to li with id = picturelist
+                        let ul = document.getElementById('pictureList');
+                        //*d. Append the picture to li
+                        li.appendChild(img);
+                        //*e. Append li to the ul
+                        ul.appendChild(li);
+                        // remove the name of the picture from list 
+                        remove(select);
+                        }
+                    else {
+                        alert("picture not found "+"🥹");
+                    }                          
+                }
+        </script>
+    </body>
+</html>

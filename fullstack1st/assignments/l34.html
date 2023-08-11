@@ -1,0 +1,31 @@
+<htmlr>
+    <body>
+        <h1>Change second to red 😱</p>
+        <button onclick="changeSecondItemToRed3()">Change second to red</button>
+        <ul id="myFriends">
+            <li>hi 😇</li>
+            <li>by 👺</li>
+            <li>dy 👻</li>
+        </ul>
+        <script>
+            function changeSecondItemToRed1(){
+                  let list = document.querySelectorAll("#myFriends li")
+                  let second = list.children[1]
+                  second.style.color="red";
+            }
+  
+            function changeSecondItemToRed2(){
+                  let list = document.querySelectorAll("li")
+                  let second = list[1]
+                  second.style.color="red";
+            }
+            function changeSecondItemToRed3(){
+                  let list = document.getElementById("myFriends")
+                  let second = list.children[1]
+                  second.style.color="red";
+            }
+  
+  
+        </script>
+    </body>  
+  </html>

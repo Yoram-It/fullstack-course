@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p> Do it yourself 2 </p>
+        <p> Given the following HTML page. Add a function called focusFunction to the
+            page. When the user is focused on the text box, the background color will
+            change to yellow</p>
+        <h3>Change Background Color of Textbox</h3>
+            Enter your name:
+        <input type="text" id="myInput" onblur="blurFunction(this)" onfocus="focusFunction(this)">
+        <script>
+            function blurFunction(obj) {
+                obj.style.background =  "red";
+            }
+            function focusFunction(obj) {
+                obj.style.background = "yellow";   
+            }
+        </script>
+    </body>
+</html>

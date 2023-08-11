@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+
+<body>
+<h1>Change second to red 😱</h1>
+<button onclick="changeSecondItemToRed()">Change second to red</button>
+<ul id="myFriends">
+  <li>hi 😇</li>
+  <li>by 👺</li>
+  <li>dy 👻</li>
+</ul>
+<script>
+  function changeSecondItemToRed(){
+    const listItems = document.getElementById("myFriends").getElementsByTagName("li");
+    listItems[1].style.color = "red";
+    
+  }
+</script>
+</body>
+</html>

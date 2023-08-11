@@ -1,0 +1,21 @@
+<html>
+<body>
+    <h1>for loops</h1>
+    <button onclick="howManyBiggerThan20()">how many bigger than 20 </button>
+    <p id="count"></p>
+    <p id="numbers"></p>
+    <script>
+        function howManyBiggerThan20(){
+            var counter = 0;
+            for(var i=0;i<4;i++){
+                var n = prompt("print num ");
+                n = parseInt(n);
+                if(n > 20){
+                    counter++;// counter
+            }
+        }
+        document.getElementById("count").innerText = counter;
+        }
+    </script>
+</body>
+</html>

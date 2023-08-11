@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+    <body>
+        <h1>JavaScrip Dom / Do it Yourself 2 </h1>
+
+        <h2> Given the following HTML page. Add a function called
+        evenOrOdd to the page. If the index of an item is odd
+        then item will be red otherwise the item will be
+        green.(remember index start from 0)</h2>
+    
+
+        <h1> odd: red ? othewize green </p>
+        <button onclick="evenOrOdd()">index is odd or even </button>
+        <ul id="items">
+            <li>1</li>
+            <li>208</li>
+            <li>99</li>
+            <li>100</li>
+            <li>101</li>
+        </ul>
+        <script>
+                function evenOrOdd(){
+                    const listItems = document.getElementById("items").getElementsByTagName("li"); // create list
+                    // console.log(listItems.length); // check list size
+                    for (let i = 0; i < listItems.length; i++ ) {
+                        // console.log(i % 2); // check if log function works
+                        // console.log(Math.round((i % 2))); // in case ned to round the result - no needed ....
+                        if ((i % 2) == 1) listItems[i].style.color = "red";
+                        else listItems[i].style.color = "green";
+                    }
+                }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+            .btn {
+                width: 200px;
+                height: 60px;
+                border: 1px solid salmon;
+                border-radius: 10px;
+                text-align: center;
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div1" class="btn">this is green div</div>
+    </body>
+    <script>
+        function myFunction() {
+            //alert("hello myFunction");
+            console.log("document pressed");
+        }
+        function divFunction() {
+            //alert("hello  divFunction");
+            document.getElementById("div1").style.background = "yellow";
+        }
+        function mouseoverFunction() {
+            //alert("hello  mouseoverFunction");
+            document.getElementById("div1").style.background = "pink";
+        }
+        function mouseoutFunction() {
+            //alert("hello  mouseoutFunction");
+            document.getElementById("div1").style.background = "gray";
+        }
+
+        document.addEventListener("click", myFunction);
+        document.getElementById("div1").addEventListener("click", divFunction);
+        document
+            .getElementById("div1")
+            .addEventListener("mouseover", mouseoverFunction);
+        document
+            .getElementById("div1")
+            .addEventListener("mouseout", mouseoutFunction);
+    </script>
+</html>

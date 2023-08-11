@@ -1,0 +1,22 @@
+<html>
+<body>
+    // Given the following html page. Add to the page a function called addFriend that adds to
+    the list (ul) when the user inputs
+<h1>Please add friends </p>
+<input type="text" id="friend" placeholder="add friend" >
+<button onclick="addFriend()">Add friend</button>
+<ul id="myFriends">
+
+</ul>
+<script>
+function addFriend(){
+    let newLi = document.createElement("li");
+    // newLi.innerText = parseInt(document.getElementById("friend").value);
+    newLi.innerText = document.getElementById("friend").value;
+    let element = document.getElementById("myFriends");
+    element.appendChild(newLi);
+}
+</script>
+
+</body>
+</html>

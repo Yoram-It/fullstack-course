@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <titel>I love Israel</titel>
+    </head>
+    <body>
+        <h1> add two numbers </h1>
+        Please add two numbers: <br/>
+        <input type = "text" id = "num1" placeholder = "print 1st number">  <br/>
+        <input type = "text" id = "num2" placeholder = "print 2nd number">  <br/>
+        <button onclick ="sum()">click me please</button>
+    </body>
+    <script>
+        function sum(){
+            var num1 = parseInt(document.getElementById("num1").value);
+            var num2 = parseInt(document.getElementById("num2").value);
+            var num = num1+num2;
+            alert(num);
+        }
+    </script>
+
+</html>

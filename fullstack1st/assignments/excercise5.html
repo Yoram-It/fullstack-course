@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+    <html>
+        <body>
+            <h1>JavaScript Arrays</h1>
+            <h2>Creating an ArrayWrite a script that initializes an array with the numbers 23,5,30,11,12. Print the
+                minimum number to the console </h2>
+
+            <p id="demo"></p>
+
+            <script>
+                // define array 
+                const points = [23,5,30,11,12];
+                // clculate array's mid cell
+                let min = points[0];
+                // find the minimum place
+                for (let i=1; i< points.length;i++)
+                {
+                    if (points[i] < min) min = points[i];
+                }
+                // print the arry mininum number to the console
+                console.log(min);
+                // print the array min number to the screen
+                document.getElementById("demo").innerHTML = "the min number is equals to : "+min;  
+            </script>
+
+        </body>
+</html>

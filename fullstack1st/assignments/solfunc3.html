@@ -1,0 +1,33 @@
+<html>
+    <body>
+        <button onclick="getInput()">find max</button>
+        <br />
+        <p id="max"></p>
+        <script>
+            //delaration
+            const getInput = function () {
+                //alert("work");
+                let n1 = prompt("print num1");
+                let n2 = prompt("print num2");
+                let n3 = prompt("print num3");
+                let final = max(parseInt(n1), parseInt(n2), parseInt(n3));
+                //alert(final);
+                document.getElementById("max").innerText = "max is " + final;
+                if (final > 100) {
+                    document.getElementById("max").style.color = "green";
+                } else {
+                    document.getElementById("max").style.color = "red";
+                }
+            };
+            const max = function (n1, n2, n3) {
+                if (n1 >= n2 && n1 >= n3) {
+                    return n1;
+                } else if (n2 >= n1 && n2 >= n3) {
+                    return n2;
+                } else {
+                    return n3;
+                }
+            };
+        </script>
+    </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+
+    </head>
+    <body>
+            <h1> Do it yorself 1 </h1>
+            <h3> 1. Create a class named Shape that contains 3 parameters. 
+                The color of the shape, the x of the shape and the y
+                of the shape. </h3>
+            <h3> 2. Create a constructor that receives all the parameters
+                and initializes them </h3>
+            <h3>3. Add to the class a function called move that accepts
+                as parameter x and y and changes x and y accordingly.
+                (this.x+=x and this.y+=y) </h3>
+            <h3> Create an instance of the class with color red, x = 50
+                and y = 30 </h3>
+            <h3>5. Run the move function with x = 50 and y = 60 and print
+                the class to the console </h3>
+                
+                <button onclick = "shape1stLog()">
+                    click here to createSape and displae 1st time
+                </button>
+                <button onclick = "shapeMove()">
+                    click here to move and displae 2nd time
+                </button>
+                
+
+        <script>
+
+                // 1. Create a class named Shape that contains 3 parameters.
+                class Shape {
+                    // 2. reate a constructor that receives all the parameters and initializes them
+                    constructor(color, x, y) {
+                    this.color = color;
+                        {
+                            this.x = x;
+                            this.y = y;
+                        }
+                    }
+                    // 3. Add to the class a function called move that accepts x and y
+                    move (x,y) {
+                        this.x+=x;
+                        this.y+=y;
+                    }
+                }
+                
+                // 4. Create an instance of the class with color red, x = 50 and y = 30
+                const firstShape = new Shape ("red",50,30);
+                let shape1stLog = function () {
+                                 
+                    console.log("log following creation:");
+                    console.log(firstShape);
+                }
+                // 5. Run the move function with x = 50 and y = 60 and print the class to the console
+                let shapeMove = function () {        
+                    firstShape.move(50,60);
+                    
+                    console.log("log following move:");
+                    console.log(firstShape);
+                }
+
+        </script>
+
+
+    </body>
+
+
+
+
+</html>

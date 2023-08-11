@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Canvas experiment</title>
+  </head>
+  <body>
+    <p id = "1st" ></p>
+    <p id = "2nd" ></p>
+    <p id = "3rd" ></p>
+    <p id = "4th" ></p>
+    <p id = "5th" ></p>
+    <canvas id="canvas" width="150" height="150"></canvas>
+    <script type="application/javascript">
+      function draw1() {
+        const canvas = document.getElementById("canvas");
+        if (canvas.getContext) {
+          const ctx = canvas.getContext("2d");
+          
+          document.getElementById("1st").innerHTML = "first";
+          ctx.fillStyle = "rgb(400, 0, 0)";
+          ctx.fillRect(10, 10, 50, 50);
+
+          document.getElementById("2nd").innerHTML = "secound";
+          ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+          ctx.fillRect(30, 30, 50, 50);
+        }
+      }
+      function draw2() {
+        const canvas = document.getElementById("canvas");
+        if (canvas.getContext) {
+          const ctx = canvas.getContext("2d");
+
+          document.getElementById("3rd").innerHTML = "theerd";
+          ctx.fillRect(45, 45, 100, 100);
+          ctx.clearRect(65, 65, 60, 60);
+          ctx.strokeRect(70, 70, 50, 50);
+        }
+      }
+      function draw3() {
+        const canvas = document.getElementById("canvas");
+        if (canvas.getContext) {
+          const ctx = canvas.getContext("2d");
+
+          document.getElementById("4th").innerHTML = "4th";
+          ctx.beginPath();
+          ctx.moveTo(75, 50);
+          ctx.lineTo(100, 75);
+          ctx.lineTo(100, 25);
+          ctx.fill();
+        }
+      }
+      function draw4() {
+        const canvas = document.getElementById("canvas");
+        if (canvas.getContext) {
+          const ctx = canvas.getContext("2d");
+
+          document.getElementById("5th").innerHTML = "5th";
+          ctx.beginPath();
+          ctx.arc(15, 15, 50, 0, Math.PI * 2, true); // Outer circle
+          ctx.moveTo(110, 75);
+          ctx.arc(75, 75, 35, 0, Math.PI, false); // Mouth (clockwise)
+          ctx.moveTo(65, 65);
+          ctx.arc(60, 65, 5, 0, Math.PI * 2, true); // Left eye
+          ctx.moveTo(95, 65);
+          ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // Right eye
+          ctx.stroke();
+        }
+      }
+      draw1();
+      draw2();
+      draw3();
+      draw4();
+    </script>
+  </body>
+</html>

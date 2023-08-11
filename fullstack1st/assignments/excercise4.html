@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+    <html>
+        <body>
+            <h1>JavaScript Arrays</h1>
+            <h2>Write a script that initializes an array with the numbers 23,22,30,11. Print yes to
+                the console if the last number equals to the first number else print no .</h2>
+            
+            <p id="demo"></p>
+
+            <script>
+                // define array 
+                const points = [23,22,30,23];
+                // if array 1st value is equal to array last velue print "yes" else print "No"
+                if (points[0] == points[points.length-1])  
+                    document.getElementById("demo").innerHTML = "yes";
+                else 
+                    document.getElementById("demo").innerHTML = "no";
+            
+            </script>
+
+        </body>
+</html>

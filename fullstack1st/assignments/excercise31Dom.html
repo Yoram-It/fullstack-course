@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+    <html>
+        <body>
+
+            <h1>JavaScrip Dom / Do it Yourself 1 </h1>
+            <h1>Color or </p>
+            <h2>Given the following HTML page. Add a function called
+                colorGreenOrBlue to the page. If the value of the item is
+                less than 100 then the item will be red otherwise the item
+                will be blue  </h2>
+
+            <button onclick="colorGreenOrBlue ()">Color or</button>
+            <ul id="items">
+                <li>1</li>
+                <li>208</li>
+                <li>99</li>
+                <li>-201</li>
+                <li>101</li>
+                <li>100</li>
+                <li>88</li>
+            </ul>
+            <script>
+                function colorGreenOrBlue (){
+                    const listItems = document.getElementById("items").getElementsByTagName("li"); // create list
+                    // console.log(listItems.length); // check list size on console 
+                    for (let i = 0; i < listItems.length; i++ ) { // for each item in liat
+                        // console.log(i); // verify number of elements in list
+                        // console.log(parseInt(listItems[i].innerText)); //  check the content of each item in list    
+                        if (parseInt(listItems[i].innerText) < 100) listItems[i].style.color = "red"; // less 100 red
+                        else listItems[i].style.color = "blue";                                       // =100 or bigger blue
+                    }
+                }
+            </script>
+        </body>
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

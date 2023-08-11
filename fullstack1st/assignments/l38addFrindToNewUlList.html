@@ -1,0 +1,23 @@
+addFriends : <html>
+   <body>
+       <h1>Please add friends 💕</p>
+       <input type="text" id="friend" placeholder="add friend">
+       <button onclick="addFriend()">Add friend</button>
+       <ul id="myFriends"></ul>
+       <script>
+           function addFriend(){
+            let newLi = document.createElement("li")
+            let friend = document.getElementById("friend").value;
+            if(friend.length==0){
+                alert("empty name")
+                return
+            }
+            document.querySelectorAll(".main-nav li");
+            newLi.innerText = document.getElementById("friend").value;
+            document.getElementById("myFriends").appendChild(newLi);
+            document.getElementById("friend").value = "";
+           }
+       </script>
+      
+   </body>   
+</html>

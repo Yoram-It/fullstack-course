@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       
+    </head>
+
+    <body>
+        <button onclick="createWorkersArray()">show array of workers</button>
+        <button onclick="createRestArray()">show array of rest</button>
+                <script>
+                let restaurant= {
+                    timeShift1: '8:00-16:00',
+                    timeShift2: '16:00-00:00',
+                    shiftsWorkers: [
+                        ['Mike', 'James', 'John', 'Michael', 'William', 'David',
+                        ],
+                        ['Joseph', 'Thomas', 'Charles', 'Christopher', 'Daniel', 'Mark',
+                        ],
+                    ],
+                    totalTipShift1: 4000,
+                    totalTipShift2: 5000,
+                    tipped: ['Mike', 'James', 'Michael', 'David','Thomas'],
+                    date: '12/12/2021'
+                };
+                function createWorkersArray () {
+                    let arrOfWorkers = [...restaurant.shiftsWorkers[0],...restaurant.shiftsWorkers[1]];
+                    alert(arrOfWorkers);
+                    console.log(arrOfWorkers);
+                }
+                function createRestArray () {
+                    let [manager,...arrOfWorkers] = [...restaurant.shiftsWorkers[0],...restaurant.shiftsWorkers[1]];
+                    alert("manager = "+ manager+ " Workers : " + arrOfWorkers);
+                    console.log("manager = ", manager, " Workers : ",arrOfWorkers);
+                }
+             </script>
+    </body>
+</html>

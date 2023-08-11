@@ -1,0 +1,32 @@
+Given the following html page. Add to the page a function
+called removeFriend. The function remove items from list
+according to user inputs.
+remove Frind: <html>
+<body>
+<h1>Remove Name 😇 </p>
+<input type="text" id="name" placeholder="remove name">
+<button onclick="removeNames()">Remove Name</button>
+    <ul id="items">
+        <li>Mike</li>
+        <li>David</li>
+        <li>Suzan</li>
+    </ul>
+<script>
+    function removeNames(){
+        var userInput = document.getElementById("name").value;
+        console.log("UserInput: "+ userInput);
+        var listNames = document.querySelectorAll ('#items li');
+        console.log("#items : "+document.querySelectorAll ('#items li'));
+        for(var i=0; li=list[i]; i++) {
+            if (listNames.length <= 0) {
+                alert("empty name list name not in list");
+                return;
+            }
+            console.log("Li: "+  listNames.children[li].);
+
+            if (userInput === li.parentNode.value) li.parentNode.removeChild(li); 
+        }
+    }
+</script>
+</body>
+</html>

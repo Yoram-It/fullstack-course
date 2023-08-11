@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+    <html>
+        <body>
+
+            <h1>JavaScript Functions / Do it Yourself 2</h1>
+            <h2>A. Write an arrows function that accepts 3 numbers as a parameter and displays
+                the minimum number in alert . </h2>
+            <h2>B. Call the function from A with n1=3, n2=5, n3=9 and alert the minimum number  </h2>
+            
+            <button onclick="insertNumbers()">find min</button>
+            <br />
+            <p id="fun"></p>
+            
+            <script>
+                function insertNumbers () {
+                let findMin = (num1,num2,num3) =>  {
+                        let min = Math.min(num1,num2,num3);
+                        alert(min);
+                }
+                let n1=3;
+                let n2=5;
+                let n3=9;
+                findMin(n1,n2,n3);
+            }  
+            </script>
+        </body>
+</html>
